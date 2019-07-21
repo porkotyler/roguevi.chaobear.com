@@ -1,0 +1,3437 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+ 
+<meta charset="utf-8">
+<meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
+        
+<meta name="color:Tagline Background" content="#FFFFFF"/>
+<meta name="color:Tagline" content="#FFFFFF"/>
+<meta name="color:Header" content="#213f52"/>
+<meta name="color:Blog Title" content="#FFFFFF"/>
+<meta name="color:Text Posts" content="#FFFFFF"/>
+<meta name="color:Quote Posts" content="#FFFFFF"/>
+<meta name="color:Link Posts" content="#FFFFFF"/>
+<meta name="color:Chat Posts" content="#FFFFFF"/>
+<meta name="color:Text" content="#666666"/>
+<meta name="select:Tagline Background Style" content="tiled" title="Tiled">
+<meta name="select:Tagline Background Style" content="fullwidth" title="Full Width">
+<meta name="select:Avatar" content="circle" title="Circle">
+<meta name="select:Avatar" content="square" title="Square">
+<meta name="select:Avatar" content="none" title="None">
+<meta name="if:White note controls" content="0"/>
+<meta name="if:Black note controls" content="0"/>
+<meta name="if:Grey note controls" content="1"/>
+<meta name="image:Logo" content=""/>
+<meta name="image:Tagline Background" content="https://static.tumblr.com/2w7y46r/Ckpn6z18o/food.png"/>
+<meta name="text:Tagline" content=""/>
+<meta name="text:Button 1" content=""/>
+<meta name="text:Button Link 1" content=""/>
+<meta name="text:Button 2" content=""/>
+<meta name="text:Button Link 2" content=""/>
+<meta name="text:Button 3" content=""/>
+<meta name="text:Button Link 3" content=""/>
+<meta name="text:Button 4" content=""/>
+<meta name="text:Button Link 4" content=""/>
+<meta name="text:Button 5" content=""/>
+<meta name="text:Button Link 5" content=""/>
+<meta name="if:Center Tagline" content="1"/>
+<meta name="if:Fixed Header" content="1"/>
+<meta name="if:No Header" content="0"/>
+<meta name="if:Collapse photosets" content="1"/>
+<meta name="if:Notes on blog" content="0"/>
+
+<link rel="shortcut icon" href="{Favicon}" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://static.tumblr.com/ssdtkch/5Jtn79pu4/fontello2.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://static.tumblr.com/iwtk77u/Yhym2yygt/jquery.imagesloaded.min.js"></script>
+<script src="https://static.tumblr.com/wgijwsy/Ebfm2v4gy/jquery.masonry.min.js"></script>
+<script src="https://static.tumblr.com/ssdtkch/hEMn6nsau/infinitescroll.js"></script>
+
+<style type="text/css" media="screen">
+        
+@import url(https://fonts.googleapis.com/css?family=Cabin:700);
+
+body 
+{
+    font: 1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+        
+.article a 
+{
+    color:{color:Text};
+    font-weight:500;
+    text-decoration:none;
+    border-bottom:1px solid rgba({RGBcolor:Text}, 0.6);
+}
+
+{block:permalink}
+#tc_post_perma blockquote 
+{
+    border-left: 2px solid #000000 !important;
+}
+
+#tc_post_perma, #tc_post_perma a 
+{
+    color:#333333!important;
+}
+
+.postid_ #tc_post_perma .rightcontent
+{
+    display:none;
+    position:relative;
+}
+
+.postid_ #tc_post_perma .leftcontent
+{
+    width:100% !important;
+}
+{/block:permalink}
+
+#tc_post_perma .rightcontent
+{
+    width:40% !important;
+    display:block;
+    position:relative;
+}
+
+#tc_post_perma .leftcontent
+{
+    width:55% !important;
+}
+
+#tc_post_perma .article
+{
+    margin-top:89px;
+}
+
+#infscr-loading img
+{
+    display:none;
+}
+
+#infscr-loading em
+{
+    padding:10px;
+    font-style:normal !important;
+}
+
+#infscr-loading
+{
+    left:50%;
+    margin:0px 0 65px -100px;
+    width:200px;
+    position:absolute;
+    bottom:0px;
+    display: inline-block;
+    background-color:white;
+    font-style:normal !important;
+    text-align: center;
+    border: 1px solid #666;
+    color: #666;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.LoadNextPage:hover
+{
+    border: 2px solid #666;
+    width:198px;
+    padding: 13px 14px;
+}
+
+.LoadNextPage
+{
+    left:50%;
+    margin:0px 0 65px -100px;
+    width:200px;
+    position:absolute;
+    bottom:0px;
+    display: inline-block;
+    background-color:white;
+    font-style:normal !important;
+    text-align: center;
+    border: 1px solid #666;
+    color: #666;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.LoadNextPage a
+{
+    text-decoration:none;
+    color: #666;
+}
+
+p iframe
+{
+    width:100%;
+}
+
+#tumblr_controls[src],
+#tumblr_controls.tumblr_sticky_iframe[src] 
+{
+    position: fixed !important; 
+    right: 5% !important;  
+    top: 20px !important;
+}
+
+@media screen and (max-width: 900px) {
+
+#tumblr_controls[src],
+#tumblr_controls.tumblr_sticky_iframe[src] 
+{
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+}
+}
+
+.header 
+{
+{block:ifnotnoheader}
+    background-color:{color:Header};
+{/block:ifnotnoheader}
+    opacity:0.97;
+    width: 100%;
+    position:absolute;
+/* No header, no tagline, yes fixed */
+{block:ifnoheader}
+{block:ifnottagline}
+{block:iffixedheader}
+    position:fixed;
+{/block:iffixedheader}
+{/block:ifnottagline}
+{/block:ifnoheader}
+        
+/* yes header, yes fixed */
+{block:ifnotnoheader}
+{block:iffixedheader}
+    position:fixed;
+{/block:iffixedheader}
+{/block:ifnotnoheader}
+        
+{block:ifnottagline}
+{block:iffixedheader}
+    position:fixed;
+{/block:iffixedheader}
+{/block:ifnottagline}
+{/block:ifnotnoheader}
+
+    padding: 20px 0 0px!important;
+    z-index: 998;
+    top:0px;
+    line-height: 24px;
+}
+
+h1, p
+{
+    margin:0;    
+    padding:0;
+}
+          
+h1 a
+{
+    font-weight:700 !important;
+}
+          
+.header_in 
+{
+    width:100%;
+    height:69px;
+    max-width:90%;
+    z-index: 998;
+    margin-right:auto;
+    margin-left:auto;
+}
+          
+.logo 
+{
+    float: left;
+    color:{color:blog title};
+    font-weight: 900;
+    font-size: 34px;
+    letter-spacing:0px;
+    {block:ifnotlogoimage}padding-top:14px;{block:ifnotlogoimage}
+    {block:iflogoimage}padding-top:5px;{block:iflogoimage}
+}     
+     
+.logo img
+{
+    max-height:40px;
+    width:auto;
+}
+     
+.logo a
+{
+    color:{color:blog title};
+    text-decoration:none; 
+}
+     
+.content2
+{
+    left:0px;
+    position:relative;
+    top:0px;
+    overflow-x: hidden;
+}
+
+.permalinkpage
+{
+    min-height:1000px;
+}
+
+.iconbutton
+{
+    width: 20px;
+    height: 15px;
+    z-index: 100;
+    float:left;
+    margin-left:20px;
+    {block:ifnotlogoimage}margin-top:23px;{/block:ifnotlogoimage}
+    {block:iflogoimage}margin-top:18px;{/block:iflogoimage}
+}
+     
+.closeiconbutton
+{
+    width: 20px;
+    height: 15px;
+    z-index: 100;
+    float:left;
+    margin-left:20px;
+    {block:ifnotlogoimage}margin-top: 24px;{/block:ifnotlogoimage}
+    {block:iflogoimage}margin-top:20px;{/block:iflogoimage}
+}
+
+.iconbutton:hover
+{
+    {block:ifnotlogoimage}margin-top:22px;{/block:ifnotlogoimage}
+    {block:iflogoimage}margin-top:17px;{/block:iflogoimage}
+}
+     
+.iconbutton:hover .icon
+{
+    margin-bottom:4px;
+}
+     
+.iconbutton:hover .icon2
+{
+    margin-bottom:4px;
+}
+     
+.iconbutton .icon 
+{
+    width: 18px;
+    height: 3px;
+    margin-bottom:3px;
+    background:{color:Blog title};
+    float:left;
+}
+
+.iconbutton .icon2 
+{
+    width: 18px;
+    height: 3px;
+    margin-bottom:3px;
+    background:{color:Blog title};
+    float:left;
+}
+
+.iconbutton .icon3 
+{
+    width: 18px;
+    height: 3px;
+    background:{color:Blog title};
+    float:left;
+}
+
+.closeiconbutton .icon 
+{
+    width: 14px;
+    height: 3px;
+    -webkit-transform: rotate(-42deg);
+    transform: rotate(-42deg);
+    background:{color:Blog title};
+    float:left;
+}
+  
+.closeiconbutton .icon2 
+{
+    display:none;
+}
+  
+.closeiconbutton .icon3 
+{
+    width: 14px;
+    -webkit-transform: rotate(42deg);
+    transform: rotate(42deg);
+    height: 3px;
+    background:{color:Blog title};
+    float:left;
+    margin-top: 5px;
+}
+
+.tagline 
+{       
+    background: url({image:tagline Background});
+    background-color:{color:tagline background};
+    position: relative;
+    width: 100%;
+    {block:ifnotnoheader}margin-top:89px;{/block:ifnotnoheader}
+     padding: 0;
+ {block:ifnoheader}
+     margin-top:0;
+     padding-top:89px;
+ {/block:ifnoheader}
+}
+
+.fullwidth
+{
+    background-size: cover;
+}
+
+.tiled
+{
+    background-repeat:repeat;
+}
+
+.tagline_text 
+{
+    margin-right:auto;
+    margin-left:auto;
+    {block:ifcentertagline}text-align:center;{/block:ifcentertagline}
+    font-size: 35px;
+    color: {color:Tagline};
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 90%;
+    margin-bottom: 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+          
+.content 
+{
+{block:IndexPage}
+    opacity:0;    
+    padding-bottom: 195px;
+    {block:ifnottagline}margin-top:89px;{/block:ifnottagline}
+
+{block:ifnoheader}
+{block:ifnottagline}
+    margin-top:0;
+{/block:ifnottagline}
+{/block:ifnoheader}
+
+{block:ifnotnoheader}
+{block:ifnottagline}
+{block:ifButton1}
+    margin-top:0;
+{/block:ifButton1}
+{/block:ifnottagline}
+{/block:ifnotnoheader}
+
+{/block:IndexPage}
+
+    width:100%;
+    height:auto;
+}
+
+#tc_post_perma
+{
+    {block:permalinkpage}margin-top:89px;{/block:permalinkpage}
+    {block:iftagline}margin-top:0px;{/block:iftagline}
+    {block:ifButton1}margin-top:0px;{/block:ifButton1}
+}
+
+.photowidth
+{
+    width:100%;
+    display:block;
+}
+
+.article
+{
+    {block:indexPage}width:25%;{/block:indexPage}
+    display:block;
+}
+          
+{block:ifcollapsephotosets}
+.my-photoset img 
+{
+    display: none;
+}
+
+.my-photoset img:first-child 
+{
+    display: block;
+}
+{/block:ifcollapsephotosets}
+
+
+.expand .my-photoset img 
+{
+    display: block !important;
+}
+
+.read_more
+{
+    padding:10px;
+    background: none;
+    border: 1px solid  rgba({RGBcolor:Text}, 0.3) !important;
+    cursor:pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.read_more:after
+{
+    display: inline;
+    padding-left: 10px;
+    vertical-align: 0px;
+    speak: none;
+    font-family: 'fontello','Blank';
+    content: '\e800';
+    font-size:13px;
+}
+
+.read_more_container
+{
+    margin:30px 0 10px 0!important;
+}
+
+blockquote 
+{
+    padding: 0px 20px;
+    border-left:2px solid {color:Text};
+    margin:15px 0px;
+}
+
+ul 
+{
+    margin:15px 0px;
+    padding-left:20px;
+}
+
+ol 
+{
+    margin:15px 0px;
+    padding-left:22px;
+}
+
+.photohover_container
+{
+    background-color:rgba(0, 0, 0, 0.6); 
+    text-align:center;
+    width:100%;
+    height:100%;
+    position:absolute;  
+    width: 100%;
+    height: 100%;
+    display: table;   
+}
+
+.photohover
+{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tw_like_button, .tw_reblog_button, .tw_share_button
+{
+    width:40px;
+}
+
+.photocontrols
+{
+    height:40px;
+    background:red;
+}
+
+.tc_post_controls{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    -webkit-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    transition: opacity 0.4s ease-out;
+    -o-transition: opacity 0.4s ease-out;
+}
+
+.photocount
+{
+    height:30px;
+    margin:0 0 5px 7px;
+    font-size:20px;
+    font-weight:700;
+    color:#fff;
+}
+
+.share
+{
+    top:-4px;
+}
+
+.tc_post_controls_background
+{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background-color:rgba(0, 0, 0, 1);
+    opacity: 0.7;
+    filter:alpha(opacity=70);
+    z-index: 100;
+}
+
+.photopost:hover .tc_post_controls
+{
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+
+.photopost:hover .tc_post_controls_container
+{
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+
+.circleme .reblog_button
+{
+    padding-left:3px;
+    padding-top:-2px;
+    text-decoration:none;
+    border:none;
+}
+
+.tc_post_controls_container .circleme
+{
+    position:relative;
+    display: inline-block;
+    font-size: 19px;
+    height: 40px;
+    width: 40px;
+    font-family: 'fontello','Blank';
+    color:#fff;
+    cursor:pointer;
+    margin-left:5px;
+    line-height:40px;
+    border-bottom: 0 !important;
+}
+
+.tc_post_controls_container
+{
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    text-align: center;
+    left: 50%;
+    margin-left: -76px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    z-index: 101;
+}
+
+.textpost
+{
+    background-color:{color:text posts};
+    color:{color:Text};
+    padding:35px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-right: 1px solid rgba({RGBcolor:Text}, 0.3);
+    border-bottom: 1px solid rgba({RGBcolor:Text}, 0.3);
+}
+
+.textpost h1
+{
+    margin-bottom:10px;
+}
+
+.textpost img 
+{
+    max-width:100%;
+}
+
+.textpost_perma
+{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.textpost_perma h1
+{
+    margin-bottom:10px;
+}
+
+.textpost_perma img
+{
+	max-width:100%;
+}
+
+.answerpost img 
+{
+	max-width:100%;
+}
+
+.answerpost_perma img 
+{
+	max-width:100%;
+}
+
+.linkpost img 
+{
+	max-width:100%; 
+}
+.linkpost_perma img 
+{
+	max-width:100%; 
+}
+
+.quotepost
+{
+    background-color:{color:quote posts};
+    color:{color:Text};
+    padding:35px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-right: 1px solid rgba({RGBcolor:Text}, 0.3);
+    border-bottom: 1px solid rgba({RGBcolor:Text}, 0.3);
+}
+
+.quotepost_perma
+{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.linkpost
+{
+    background-color:{color:link posts};
+    color:{color:Text};
+    padding:35px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-right: 1px solid rgba({RGBcolor:Text}, 0.3);
+    border-bottom: 1px solid rgba({RGBcolor:Text}, 0.3);
+}
+
+.linkpost p
+{
+    margin-top:10px;
+}
+
+.linkpost a
+{
+    color:{color:Text};
+    text-decoration:none;
+    border-bottom:1px solid {color:Text};
+}
+
+.linkpost_perma
+{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.linkpost_perma p
+{
+    margin-top:10px;
+}
+
+.linkpost_perma a
+{
+    color:#fff;
+    text-decoration:none;
+    border-bottom:1px solid #fff;
+}
+
+#lightbox h1
+{
+    font-size:29px;
+}
+
+#lightbox .rightcontent h1 
+{
+    font-size: 15px;
+}
+
+h1 
+{
+    {block:indexpage}font-size:23px;{/block:indexpage}
+    {block:permalinkpage}font-size: 29px;{block:permalinkpage}
+    font-weight:800;
+    line-height: 1.3;
+}
+
+.linkpost h1:after
+{
+    display: inline;
+    padding-left: 10px;
+    vertical-align: 0px;
+    speak: none;
+    font-family: 'fontello','Blank';
+    content: '\e800';
+    font-size:15px;
+}
+
+.linkpost_perma h1:after
+{
+    display: inline;
+    padding-left: 10px;
+    vertical-align: 0px;
+    speak: none;
+    font-family: 'fontello','Blank';
+    content: '\e800';
+    font-size:16px;
+}
+
+.chatpost_perma
+{
+    color:#fff;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.chatpost_perma p
+{
+    padding:10px 0px;
+}
+
+.chatpost_perma p:first-child
+{
+    margin-top:30px;
+}
+
+.chatpost_perma p:last-child
+{
+    margin-bottom:20px;
+}
+
+.chatpost_perama h1
+{
+    padding:20px 20px 15px 20px;
+}
+
+.chatpost
+{
+    background-color:{color:chat posts};
+    color:{color:Text};
+    font-size: 15px;
+    line-height: 1.5;
+    padding:15px;
+    border-right: 1px solid rgba({RGBcolor:Text}, 0.3);
+    border-bottom: 1px solid rgba({RGBcolor:Text}, 0.3);
+}
+
+.chatpost p
+{
+    padding:10px 20px;
+}
+
+.chatpost p:first-child
+{
+    margin-top:20px;
+}
+
+.chatpost p:last-child
+{
+    margin-bottom:20px;
+}
+
+.chatpost h1
+{
+    padding:20px 20px 15px 20px;
+}
+
+.odd
+{
+    background-color:rgba(225, 225, 225, 0);
+}
+
+.audiopost
+{
+    background-color:{color:audio posts};
+    color:{color:Text};
+    padding:35px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-right: 1px solid rgba({RGBcolor:Text}, 0.3);
+    border-bottom: 1px solid rgba({RGBcolor:Text}, 0.3);
+}
+
+.audiopost p
+{
+    margin-top:20px;
+}
+
+{block:indexpage}
+.spotify_audio_player 
+{
+	width:100% !important;
+	height:80px !important;
+}
+{/block:indexpage}        
+         
+.audiocircle
+{
+    height:56px;
+    width:56px;
+    top:50%;
+    left:50%;
+    margin-left:-28px;
+    margin-top:-28px;
+    position:absolute;
+    background-color:#fff;
+    -moz-border-radius: 76px;
+    -webkit-border-radius: 76px;
+    border-radius: 76px;
+}
+          
+#audioplayer 
+{ 
+    width:30px;
+    height:30px;
+    overflow:hidden;
+    position:absolute;
+    margin-top:15px;
+    margin-left:15px;
+}
+
+.albumart
+{
+    background-color:rgba(225, 225, 225, 0);
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.trans
+{
+    width:100%;
+}
+
+.videopost
+{
+    background-color:{color:video posts};
+    color:{color:Text};
+    padding:20px;
+    font-size: 15px;
+    line-height: 1.5;
+    border: 15px solid rgba(225, 225, 225, 0);
+}
+
+.videopost p
+{
+    margin-top:10px;
+}
+
+.tumblr_video_container
+{
+	width:100% !important; 
+	height:auto !important;
+}
+
+.answerpost
+{
+    background-color:{color:text posts};
+    color:{color:Text};
+    padding:35px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-right: 1px solid rgba({RGBcolor:Text}, 0.3);
+    border-bottom: 1px solid rgba({RGBcolor:Text}, 0.3);
+}
+
+.answer
+{
+    padding-top:20px;
+}
+          
+.music p
+{
+    padding:0px;
+    margin:0px !important;
+    font-weight:bold;
+}
+
+.music p:first-child
+{
+    padding-top:20px;
+}
+
+.music span
+{
+    padding:0px;
+    margin:0px !important;
+    font-weight:bold;
+}
+
+.play 
+{
+    top:50%;
+    left:50%;
+    margin-left:-10px;
+    margin-top:-10px;
+    position:absolute;
+    width:0;
+    height:0;
+    border-style:solid;
+    border-width:10px 0 10px 17.3px;
+    border-color:transparent transparent transparent #fff;
+    -webkit-transform:rotate(360deg)
+}
+
+.audioplay 
+{
+    top:50%;
+    left:50%;
+    margin-left:-15px;
+    margin-top:-19px;
+    position:absolute;
+    font-family:'fontello','Blank';
+    font-size:26px;
+    color:#fff
+}
+
+.playcircle 
+{
+    position:absolute;
+    width:50px;
+    height:50px;
+    top:50%;
+    left:50%;
+    margin-left:-32px;
+    margin-top:-28px;
+    border:3px solid #fff;
+    background:none;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    border-radius:50px
+}
+
+.playcircle2 
+{
+    position:absolute;
+    width:56px;
+    height:56px;
+    top:50%;
+    left:50%;
+    margin-left:-32px;
+    margin-top:-28px;
+    background-color:#000;
+    opacity:.4;
+    -moz-border-radius:55px;
+    -webkit-border-radius:55px;
+    border-radius:55px;
+    transition:.2s ease
+}
+
+.article:hover .playcircle2 
+{
+    opacity:.6;
+    transition:.2s ease
+}
+
+
+#pageslide 
+{
+    display: none;
+    position: absolute;
+    position:fixed;
+    top: 0;
+    height: 100%;
+    z-index: 1000000;
+    overflow-y: scroll;
+    overflow-x: none;
+    width: 280px;    
+    background-color: rgba({RGBcolor:Header}, 0.93);
+    border-right:1px solid {color:Header};
+}
+
+#side 
+{
+    z-index:99999;
+    border:0;
+}
+
+.sidebar 
+{
+    color: {color:blog title};
+    height:100%;
+    font-size:15px;
+}
+
+.sidebar a
+{
+    color: {color:blog title};
+    font-weight:800;
+    text-decoration:none;
+    border-bottom:1px solid  rgba({RGBcolor:blog title}, 0.6);
+}
+
+.square img:hover
+{
+-webkit-animation: wobble 0.2s ;
+}
+
+@-webkit-keyframes wobble  
+{
+    0%  { -webkit-transform:  rotate(0deg); }
+    20%  { -webkit-transform:  rotate(5deg); }
+    50%  { -webkit-transform:  rotate(-5deg); }
+    100%  { -webkit-transform:  rotate(0deg); }
+}
+
+.tc_avatar img
+{
+    border: 4px solid #fff;
+    margin-left:70px;
+}
+
+.circle img
+{
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;  
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;  
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+
+.circle img:hover
+{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    -webkit-transform-origin:36px 36px;
+}
+
+.none
+{
+    display:none;
+}
+
+.tc_avatar
+{
+    padding:30px 30px 0px 30px;
+    width:220px;
+    height:auto;
+}
+
+.description
+{
+    padding:30px 30px 0px 30px;
+    text-align:center;
+    line-height:1.5;
+}
+
+.sidebar ul 
+{
+    width:280px;
+    height:auto;
+    margin: 30px 0 0 0 !important;
+    padding: 0px 0 30px 0!important;
+    list-style-type: none;
+    text-transform:capitalize;
+    line-height: 1.6;
+}
+
+.sidebar li
+{
+    width:220px;
+    height:auto;
+    padding:20px 30px;
+    margin-bottom:2px;
+    background-color:{color:Header};
+    transition: background-color 0.2s ease; 
+}
+
+.sidebar li:hover
+{
+    background-color: transparent;
+}
+
+.sidebar li:after
+{
+    padding-left:5px;
+    opacity:0;
+    transition: 0.2s ease;
+    display: inline;
+    vertical-align: 0px;
+    speak: none;
+    font-family: 'fontello','Blank';
+    content: '\e800';
+    font-size:11px;
+}
+
+.sidebar li:hover:after
+{
+    display: inline;
+    padding-left: 10px;
+    vertical-align: 0px;
+    opacity:100;
+    speak: none;
+    font-family: 'fontello','Blank';
+    content: '\e800';
+    font-size:11px;
+    transition: 0.2s ease;
+}
+
+.sidebar .search:after
+{
+    content:'';
+    display:none !important;
+}
+
+body, input 
+{ 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px;  
+    color: {color:blog title};
+}
+
+.sfm input { 
+    font-size: 15px; 
+    margin-top: 0px; 
+    border:0;
+    color: {color:blog title}; 
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+  
+#sb 
+{
+	font-family: 'fontello','Blank';  
+	width: 20px;
+    height: 20px;
+    font-size: 15px;
+    margin: 0 0 0 6px;
+    color: {color:blog title}; 
+    padding: 0;
+    outline: none;
+    border: 0;
+    background:none;
+    vertical-align: bottom;
+    cursor:pointer;
+}
+    
+#sf 
+{ 
+    border-bottom:1px solid {color:blog title}; 
+    background:none;
+    width:187px;
+    outline: none;
+}
+   
+.copy
+{
+    padding:0px 30px 30px 30px;
+    text-align:center;
+    font-size:12px;
+    bottom:0px;
+}    
+
+.search
+{
+    padding-top:22px !important;
+    padding-bottom:28px !important;
+}
+
+#lightbox
+{
+    display:none;
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    overflow:scroll;
+    overflow-x:hidden;
+    z-index:999;
+    background:#000;
+    background:rgba(0,0,0,0.9);
+    color:#ffffff !important;
+    line-height:1.5;
+}
+
+#lightbox_content_container
+{
+    width: 100%;
+    height: 100%;
+    display: table;
+    color:#ccc !important;
+}
+
+#lightbox_content
+{
+    display: table-cell;
+    vertical-align: middle;
+    color:#fff !important;
+}
+
+#lightbox_content a
+{
+    color:#fff !important;
+    border-color:#fff ;
+}
+
+#lightbox_content blockquote
+{
+    border-left: 2px solid #fff;
+}
+
+#tc_post_perma.content
+{
+    opacity:1;
+    width:75%;
+    min-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#tc_post_perma .article
+{
+    width:100%;
+    float:left;
+    margin-bottom: 90px;
+}
+
+#tc_post_perma .leftcontent
+{
+    width:55%;
+    float:left;
+}
+
+#tc_post_perma .rightcontent
+{
+    width:40%;
+    margin-left:5%;
+    font-size:14px;
+    float:left;
+}
+
+#tc_post_perma .leftcontent a
+{
+    border-color:#000 !important;
+}
+
+.controls
+{
+    padding-top:20px;
+    font-size:14px;
+    height:19px;
+    width:100%;
+    color:#ccc !important;
+    {block:ifnotnotesonblog}display:none;{/block:ifnotnotesonblog}
+}
+
+{block:permalink}
+.postid_ .controls
+{
+    display:none;
+}
+{/block:permalink}
+
+.controls a
+{
+    font-weight:700;
+    border-bottom:0px;
+    {block:ifgreynotecontrols}color:#ccc !important;{/block:ifgreynotecontrols}
+    {block:ifwhitenotecontrols}color:#fff !important;{/block:ifwhitenotecontrols}
+    {block:ifblacknotecontrols}color:#000 !important;{/block:ifblacknotecontrols}
+}
+
+.pull_left
+{
+    float:left;   
+    margin-right:20px;
+}
+
+.pull_right
+{
+    float:right;    
+}
+
+.like_button
+{
+    margin:2px 0 0 7px;
+}
+
+.reblog_button
+{
+    margin:2px 0 0 7px;
+}
+
+.share_button
+{
+    font-family: 'fontello','Blank';
+    font-size:16px;
+    cursor:pointer;
+    {block:ifgreynotecontrols}color:#ccc !important;{/block:ifgreynotecontrols}
+    {block:ifwhitenotecontrols}color:#fff !important;{/block:ifwhitenotecontrols}
+    {block:ifblacknotecontrols}color:#000 !important;{/block:ifblacknotecontrols}
+}
+
+.cta_container
+{
+    padding-top:15px;
+    text-align:center;
+}
+
+.cta
+{
+    background: none;
+    border: 1px solid  {color:Tagline};
+    color:{color:Tagline};
+    padding:7px;
+    padding-left:21px;
+    padding-right:21px;
+    font-weight:400;
+    font-size:15px;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.cta:hover
+{
+    border: 2px solid  {color:Tagline};
+    padding:6px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+{block:permalink}
+.closebutton
+{
+    display:none;
+}
+{/block:permalink}
+
+button:focus
+{
+	outline:0
+}
+
+.closebutton
+{
+    color:white;
+    font-family: 'fontello','Blank';
+    top:33px;
+    left:50px;
+    position:fixed;
+    font-size:25px;
+    cursor:pointer;
+    opacity:1;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;   
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+
+.closebutton:hover
+{
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+}
+
+.permacaption
+{
+    margin-bottom:30px;
+}
+
+.permainfo
+{
+    font-weight: 700;
+    cursor:pointer;
+    color: #ccc;
+    font-size: 16px;
+    float:left;
+    margin-left: 8px;
+    {block:permalinkpage}margin-top:1px;{/block:permalinkpage}
+}
+
+.permainfo:after
+{
+    font-family: 'fontello','Blank';
+    content:"d";
+    padding-left:10px;
+}
+
+.tags
+{
+    margin-bottom:30px;
+}
+
+.tags span
+{
+    margin-right:12px; 
+    line-height:26px;
+    font-size:14px;
+}
+
+.tags span a
+{
+    border-bottom:0px;
+    font-weight:normal;
+}
+
+.permacontrols a
+{
+    font-weight:700;
+    border-bottom:0px;
+}
+
+.like_button2
+{
+    margin-left:-4px;
+}
+
+.share_button2
+{
+    margin-left: 7px;
+    margin-top: -2px;
+    {block:permalinkpage}margin-top: 1px;{/block:permalinkpage}
+    font-family: 'fontello','Blank';
+    font-size:19px;
+    cursor:pointer;
+    color:#ccc;
+}
+
+.morebutton
+{
+    font-family: 'fontello','Blank';
+    font-size:19px;
+    cursor:pointer;
+    margin-top: -2px;
+    margin-left: 7px;
+}
+
+.bar-icon-wrapper 
+{
+    position: absolute;
+    z-index:9999999;
+    top: 20px;
+    left: 20px;
+    margin-left: -11px;
+    margin-top: -11px;
+    -webkit-transform: translate3d(0, 0, 0); /* The zoom: 1; of new browsers */
+}
+
+.bar-icon 
+{
+    height: 3px;
+    width: 20px;
+    background: #fff;
+    display: block;
+    opacity: 1;
+    margin-top: 4px;
+    -webkit-transition: -webkit-transform 0.15s linear;
+    -o-transition: -o-transform 0.15s linear;
+    -ms-transition: -ms-transform 0.15s linear;
+    -moz-transition: -moz-transform 0.15s linear;
+    transition: transform 0.15s linear;
+    -webkit-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.selector:hover .bar-icon:nth-child(2) 
+{
+    -webkit-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    -ms-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+}
+
+.selector:hover .bar-icon:nth-child(1) 
+{
+    -webkit-transform: rotate(39deg) translate3d(5px, 10px, 0);
+    -o-transform: rotate(45deg) translate3d(5px, 5px, 0);
+    -ms-transform: rotate(45deg) translate3d(5px, 5px, 0);
+    -moz-transform: rotate(45deg) translate3d(5px, 5px, 0);
+    transform: rotate(45deg) translate3d(5px, 5px, 0);
+    width:15px;
+}
+
+.selector:hover .bar-icon:nth-child(2) 
+{
+    opacity: 0;
+}
+
+.selector:hover .bar-icon:nth-child(3) 
+{
+    -webkit-transform: rotate(-39deg) translate3d(5px, -10px, 0px);
+    -o-transform: rotate(-45deg) translate3d(5px, -5px, 0);
+    -ms-transform: rotate(-45deg) translate3d(5px, -5px, 0);
+    -moz-transform: rotate(-45deg) translate3d(5px, -5px, 0);
+    transform: rotate(-45deg) translate3d(5px, -5px, 0px);
+    width:15px;
+}
+
+.permalinkpage
+{
+    color:#000000;
+}
+
+.showsharewidget
+{
+    margin-top:10px !important;
+    display:block !important;
+    -webkit-transition: all .3s ease-in;  
+}
+
+.sharewidget:before 
+{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -8px;
+    left: 97px;
+    content: "";
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #FFF;
+    border: 1px solid #CCC;
+    border-color: rgba(0,0,0,0.2);
+    border-right-width: 0;
+    border-bottom-width: 0
+}
+
+.sharewidget
+{
+    -webkit-transition: all .3s ease-out;
+    margin-top:50px;
+    position:absolute;
+    width:210px;
+    height:110px;
+    background-color:#fff;
+    display:none;  
+    z-index:997;
+}
+
+.photopost .sharewidget
+{
+    left:-80px !important;
+}
+
+.textpost .sharewidget, .quotepost .sharewidget, .linkpost .sharewidget, .chatpost .sharewidget, .answerpost .sharewidget
+{
+    margin-top:50px;
+    right:0px;
+}
+
+.textpost .showsharewidget, .quotepost .showsharewidget, .linkpost .showsharewidget, .chatpost .showsharewidget, .answerpost .showsharewidget
+{
+    margin-top:45px !important;    
+}
+
+.rightcontent .sharewidget
+{
+    left:0px !important;
+    margin-top: 50px !important;
+}
+
+.url
+{
+    float:left;
+    width:188px;
+    height:24px;
+    background-color:#fff;
+    font-size:12px;
+    padding-top:15px;
+    padding-bottom:10px;
+    padding:15px 10px 10px 10px;
+    border: 1px solid #ccc;
+    border-color: rgba(0,0,0,0.2);
+    border-bottom-width: 0;
+}
+
+.inputurl
+{
+    font-size:12px;
+    width:190px;
+    border:0;
+    text-align:center !important;
+    font-weight:bold;
+    outline: none;
+    color:#444444 !important;
+    margin:0 auto;
+}
+
+inputurl:focus
+{
+    outline:none;
+    border:0;
+}
+
+.social
+{
+    float:left;
+    width:210px;
+    height:70px;
+    background-color:blue;
+}
+
+.social img
+{
+    width:100%;
+}
+
+.fb
+{
+    float:left;
+    width:70px;
+    height:70px;
+    background-color:#3c599c;
+}
+
+.tw
+{
+    float:left;
+    width:70px;
+    height:70px;
+    background-color:#3ac7fc;
+}
+
+.gg
+{
+    float:left;
+    width:70px;
+    height:70px;
+    background-color:#dc4d3f;
+}
+
+.hidenotecontainer
+{
+    display: none;
+}
+
+.shownotecontainer
+{
+    display: block;
+    max-height:400px;
+    margin-bottom:40px;
+    width:auto;
+    position:absolute;
+}
+
+.shownotecontent
+{
+    position:absolute;
+    margin-top: 50px;
+    display: block !important;
+    max-height:400px;
+    width:370px;
+    overflow:scroll;
+    overflow-x:hidden;
+    background-color:#fff;
+    border: 1px solid #ccc;
+}
+
+.arrow-up 
+{
+    position: absolute;
+    width: 0;
+    left: 177px;
+    margin-top:40px;
+    z-index: 9;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid #fff;
+
+}
+
+.arrow-up2 
+{
+    position: absolute;
+    width: 0;
+    left: 176px;
+    margin-top:38px;
+    z-index: 8;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #ccc;
+}
+
+ol.notes 
+{
+    padding: 0px;
+    margin: 0px 0px;
+    list-style-type: none;
+    color:#888888;
+    font-size:12px;
+    border-bottom:0px !important;
+}
+
+ol.notes li.note 
+{
+    border-top: solid 1px rgba(0,0,0,0.1);
+    margin: 0px 15px;
+    padding:10px 0;
+    width:340px;
+    float:left;
+    line-height: 12px;
+}
+            
+ol.notes li.note:first-child 
+{
+    border-top:0px;
+}
+            
+#lightbox_content ol.notes li.note a
+{
+    color:#444444 !important;
+}
+
+ol.notes li.note img.avatar 
+{
+    vertical-align: middle;
+    margin:0 20px 0 0px;
+    width: 32px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px; 
+    height: 32px;
+    float:left;
+}
+
+ol.notes li.note span.action 
+{
+    vertical-align: -8px;
+    width: 200px;
+}
+
+ol.notes li.note .answer_content 
+{
+    font-weight: normal;
+}
+
+ol.notes li.note blockquote 
+{
+    border-color: #ccc !important;
+    padding: 4px 10px;
+    margin: 10px 0px 0px 54px;
+}
+
+ol.notes li.note blockquote a 
+{
+    text-decoration: none;
+}
+
+.more_notes_link_container
+{
+    border:0px;
+    padding: 20px 0px !important;
+}
+
+.musicplayer 
+{
+	margin-bottom:30px;
+	padding:10px;
+	background:#000
+} 
+
+.audioembed iframe 
+{
+	width:100%; 
+	height:100%;
+}
+
+.audio .leftcontent .permaaudioembed iframe 
+{
+	width:500px!important; 
+	height:550px!important;
+}
+
+.musicplayer iframe
+{
+	width:500px; 
+	height:70px !important;
+} 
+
+.audioembed iframe
+{
+	display:block;
+}
+
+</style>
+
+<!-- Custom CSS -->
+<style type="text/css" media="screen">
+
+    {CustomCSS}
+
+</style>
+
+</head>
+    
+<body>
+    
+    
+<script language="javascript">
+function send()
+{document.theform.submit()}
+</script>
+
+
+    
+<div id="side" style="display:none;" class="sidebar">
+
+<div class="tc_avatar {select:Avatar}"><img src="{PortraitURL-64}"></div>  
+
+{block:Description}
+<div class="description">{Description}</div>
+{/block:Description}
+    
+<ul>
+{block:AskEnabled}
+<a href="/ask" {Target}><li>{AskLabel}</li></a>
+{/block:AskEnabled}
+        
+<a href="/archive" {Target}><li>{lang:Archive}</li></a>
+
+{block:SubmissionsEnabled}
+<a href="/submit" {Target}><li>{SubmitLabel}</li></a>
+{/block:SubmissionsEnabled} 
+        
+<a href="/rss" {Target}><li>{lang:RSS}</li></a>
+        
+{block:HasPages} 
+{block:Pages} 
+<a href="{URL}" {Target}><li>{Label}</li></a>
+{/block:Pages}
+{/block:HasPages}
+
+<li class="search"><form action="/search" method="get" class="sfm" name="theform">
+<input type="text" name="q" value="{SearchQuery}"  id="sf" value="Search"/>
+<button id="sb" type="submit" >B</button>
+</form>
+</li>
+</ul>
+    
+<p class="copy">
+© 2019 RogueVI, a research project by Chao Bear Apparel and The Leipzig Guild of Digital Merchants.</p>
+    
+</div>
+    
+<div class="content2 postid_{postid} {block:permalink}permalinkpage{/block:permalink}">
+<div class="header" id="scrollto">
+<div class="header_in">
+<div class="logo">
+<a href="/">{block:ifnotlogoimage}{Title}{/block:ifnotlogoimage}{block:iflogoimage}<img src="{image:logo}">{/block:iflogoimage}</a>
+</div>
+
+<a href="#side" class="open-sidebar nav-button">
+
+<div id="iconbuttonselect" class="iconbutton">
+<div class="icon"></div>
+<div class="icon2"></div>
+<div class="icon3"></div>
+</div>
+        
+</a>
+</div>       
+</div>
+
+{block:iftagline}
+<div class="tagline {select:Tagline Background Style}">
+<div class="tagline_text">{text:tagline}
+
+{block:ifButton1}
+<div class="cta_container">
+<a href="{text:Button link 1}"><button class="cta">{text:Button 1}</button></a>
+                        
+{block:ifButton2}
+<a href="{text:Button link 2}"><button class="cta">{text:Button 2}</button></a>
+{/block:ifButton2}
+                        
+{block:ifButton3}
+<a href="{text:Button link 3}"><button class="cta">{text:Button 3}</button></a>
+{/block:ifButton3}
+
+{block:ifButton4}
+<a href="{text:Button link 4}"><button class="cta">{text:Button 4}</button></a>
+{/block:ifButton4}
+
+{block:ifButton5}
+<a href="{text:Button link 5}"><button class="cta">{text:Button 5}</button></a>
+{/block:ifButton5}
+                    
+</div>
+{/block:ifButton1}
+</div>
+                    
+</div>
+                    
+{/block:iftagline}
+
+{block:ifnottagline}
+{block:ifButton1}
+
+<div class="tagline {select:Tagline Background Style}">
+<div class="cta_container" style="padding-top:75px;padding-bottom:75px;">
+<a href="{text:Button link 1}"><button class="cta">{text:Button 1}</button></a>
+                     
+{block:ifButton2}
+<a href="{text:Button link 2}"><button class="cta">{text:Button 2}</button></a>
+{/block:ifButton2}
+
+{block:ifButton3}
+<a href="{text:Button link 3}"><button class="cta">{text:Button 3}</button></a>
+{/block:ifButton3}
+                    
+{block:ifButton4}
+<a href="{text:Button link 4}"><button class="cta">{text:Button 4}</button></a>
+{/block:ifButton4}
+                        
+{block:ifButton5}
+<a href="{text:Button link 5}"><button class="cta">{text:Button 5}</button></a>
+{/block:ifButton5}
+                    
+</div>
+</div>
+</div>
+
+{/block:ifButton1}
+{/block:ifnottagline}
+
+<div class="content" id="{block:permalink}tc_post_perma{/block:permalink}">
+{block:permalink}
+<div class="closebutton">
+<span onclick="ClosePerma()">x</span>
+</div>
+{/block:permalink}
+
+{block:Posts} 
+
+{block:Photo}
+<div class="article scroll photopost" {block:indexpage}{block:ifnotnotesonblog}style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"{/block:ifnotnotesonblog}{/block:indexpage} >
+      
+{block:ifnotesonblog}
+{block:indexpage}
+<div class="tc_post_controls">
+<div class="tc_post_controls_container">
+	
+{block:NoteCount}
+<div class="photocount" style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')">{NoteCountwithlabel}</div>
+{/block:NoteCount}
+          
+<div class="photocount" style="cursor:pointer; {block:NoteCount}display:none;{/block:NoteCount}" onclick="PopPerma('{Permalink}','{PostID}')">0 {lang:Notes}</div>
+          
+<span onclick="SwapClass('share_widget_{PostID}','showsharewidget');" class="share circleme">o</span>
+
+<div class="sharewidget" id="share_widget_{PostID}">
+<div class="url"><input class="inputurl" onClick="this.select();" value="{ShortURL}" /></div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}">
+<div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;">
+<div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+<span class="reblogIcon circleme" style="margin-left:7px;"> {ReblogButton size="20" color="white"}</span>
+            
+<span style="margin-left:2px;" class="heart_icon circleme" href="javascript:void(0);">{LikeButton size="20" color="white"}</span>
+            
+</div>
+          
+<div class="tc_post_controls_background" style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"></div>
+
+</div>
+        
+{/block:indexpage}
+{/block:ifnotesonblog}
+    
+   
+{block:permalinkpage}
+<div class="leftcontent">{LinkOpenTag}
+{/block:permalinkpage}
+<img src="{photoURL-500}" class="photowidth" alt="{PhotoAlt}"/>
+{block:permalinkpage}
+{LinkCloseTag}</div>
+{/block:permalinkpage}
+       
+{block:permalinkpage}
+<div class="rightcontent">
+{block:Caption}
+<div class="permacaption">{Caption}</div>
+{/block:Caption}
+    
+    
+{block:HasTags}
+<div class="tags">
+{block:Tags}
+<span><a href="{TagURL}">#{Tag}</a></span>
+{/block:Tags}
+</div>
+{/block:HasTags}
+    
+<div class="permacontrols">
+<div class="pull_left like_button2">
+{LikeButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left reblog_button2">
+{ReblogButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left share_button2" onclick="SwapClass('share_widget_{PostID}_perma','showsharewidget');">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}_perma">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+		
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="http://www.facebook.com/share.php?u=\{Permalink}">
+<div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;">
+<div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+{block:NoteCount}
+<div class="permainfo" onclick="SwapClass('notecontainer','shownotecontainer');">{NoteCountWithLabel}</div>
+{/block:NoteCount}
+
+
+<div id="notecontainer" class="hidenotecontainer">
+<div class="arrow-up"></div>
+<div class="arrow-up2"></div>
+<div class="shownotecontent">
+    
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+
+</div>
+</div>
+</div>    
+</div>
+
+{/block:permalinkpage}
+
+</div> 
+
+{/block:Photo}
+
+{block:Photoset}
+<div class="article scroll photopost {block:HasTags}{block:Tags} {URLSafeTag}{/block:Tags}{/block:HasTags}" {block:indexpage}{block:ifnotnotesonblog}style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"{/block:ifnotnotesonblog}{/block:indexpage}>
+      
+{block:ifnotesonblog} 
+{block:indexpage}
+<div class="tc_post_controls">
+<div class="tc_post_controls_container">
+
+{block:NoteCount}
+<div class="photocount" style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')">{NoteCountwithlabel}</div>
+{/block:NoteCount}
+          
+<div class="photocount" style="{block:NoteCount}display:none;{/block:NoteCount}">0 {lang:Notes}</div>
+          
+<span onclick="SwapClass('share_widget_{PostID}','showsharewidget');" class="share circleme">o</span>
+
+<div class="sharewidget" id="share_widget_{PostID}">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+<span class="reblogIcon circleme"> {ReblogButton size="20" color="white"}</span>
+            
+<span class="heart_icon circleme" href="javascript:void(0);">{LikeButton size="20" color="white"}</span>
+            
+</div>
+          
+<div class="tc_post_controls_background" style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"}></div>
+
+</div>
+      
+{/block:indexpage}
+{/block:ifnotesonblog}
+      
+{block:indexpage}
+<div class="my-photoset">
+{block:Photos}
+<img src="{PhotoURL-500}" border="0" class="photowidth" alt="{PhotoAlt}" />
+{/block:Photos}
+</div>
+{/block:indexpage}
+        
+{block:permalinkpage}
+<div class="leftcontent">{Photoset}</div>
+{/block:permalinkpage}
+        
+{block:permalinkpage}
+<div class="rightcontent">
+{block:Caption}
+<div class="permacaption">{Caption}</div>
+{/block:Caption}
+    
+{block:HasTags}
+<div class="tags">
+{block:Tags}
+<span><a href="{TagURL}">#{Tag}</a></span>
+{/block:Tags}
+</div>
+{/block:HasTags}
+
+<div class="permacontrols">
+<div class="pull_left like_button2">
+{LikeButton size="17" color="grey"}
+</div>
+    
+<div class="pull_left reblog_button2">
+{ReblogButton size="17" color="grey"}
+</div>
+    
+<div class="pull_left share_button2" onclick="SwapClass('share_widget_{PostID}_perma','showsharewidget');">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}_perma">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+{block:NoteCount}
+<div class="permainfo" onclick="SwapClass('notecontainer','shownotecontainer');">{NoteCountWithLabel}</div>
+{/block:NoteCount}
+
+<div id="notecontainer" class="hidenotecontainer">
+<div class="arrow-up"></div>
+<div class="arrow-up2"></div>
+<div class="shownotecontent">
+    
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+
+</div>
+</div>
+</div>
+</div>
+
+{/block:permalinkpage}
+</div>
+   
+{/block:Photoset}
+
+{block:Audio}
+
+<div class="article scroll audio" {block:indexpage}style="background-color:{color:text posts}; cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"{/block:indexpage}>
+
+{block:permalinkpage}
+
+<div class="leftcontent">
+<div style="float:right;">
+	
+{block:AudioEmbed}
+<div class="permaaudioembed">{AudioEmbed}</div>
+{/block:AudioEmbed}
+
+{block:AudioPlayer}
+<div class="musicplayer">{AudioPlayerBlack}</div>
+{/block:AudioPlayer}
+
+</div>
+</div>
+
+<div class="rightcontent">
+	
+{block:Caption}
+<div class="permacaption">{Caption}</div>
+{/block:Caption}
+    
+{block:PlayCount}
+<div class="permacaption" style="font-weight:bold;">
+{PlayCountWithLabel}
+</div>
+{/block:PlayCount} 
+    
+{block:HasTags}
+<div class="tags">
+{block:Tags}
+<span><a href="{TagURL}">#{Tag}</a></span>
+{/block:Tags}
+</div>
+{/block:HasTags}
+
+<div class="permacontrols">
+<div class="pull_left like_button2">
+{LikeButton size="17" color="grey"}
+</div>
+    
+<div class="pull_left reblog_button2">
+{ReblogButton size="17" color="grey"}
+</div>
+    
+<div class="pull_left share_button2" onclick="SwapClass('share_widget_{PostID}_perma','showsharewidget');">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}_perma">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+{block:NoteCount}
+<div class="permainfo" onclick="SwapClass('notecontainer','shownotecontainer');">{NoteCountWithLabel}</div>
+{/block:NoteCount}
+
+<div id="notecontainer" class="hidenotecontainer">
+<div class="arrow-up"></div>
+<div class="arrow-up2"></div>
+<div class="shownotecontent">
+    
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+ 
+</div>    
+</div>
+</div>
+</div>
+
+{/block:permalinkpage}
+
+{block:indexpage}
+<div style="{block:AudioEmbed}display:none{/block:AudioEmbed}" class="playcircle2"></div>
+<div style="{block:AudioEmbed}display:none{/block:AudioEmbed}"class="playcircle"></div>
+<div style="{block:AudioEmbed}display:none{/block:AudioEmbed}"class="play"></div>
+
+{block:AudioEmbed}
+<div style="position:absolute; width:100%; height:100%; cursor:pointer; " onclick="PopPerma('{Permalink}','{PostID}')"></div>
+{/block:AudioEmbed}
+
+<div class="audioembed"  style="{block:AudioPlayer}display:none{/block:AudioPlayer}">
+{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+</div>
+
+<img src="https://static.tumblr.com/ssdtkch/5GCn5ff7n/tran.png" style="width:100%;display:block; {block:AlbumArt}display:none;{/block:AlbumArt}{block:AudioEmbed}display:none;{/block:AudioEmbed}"/> 
+
+{block:AlbumArt}
+<img  src="{AlbumArtURL}" style="width:100%; display:block; "/> 
+{/block:AlbumArt}
+{/block:indexpage}
+</div>
+
+{/block:Audio}
+
+
+{block:Text}
+ 
+{block:ifnotesonblog}      
+<div class="article">
+{/block:ifnotesonblog}
+
+{block:ifnotnotesonblog}
+<div class="article scroll" {block:indexpage}style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"{/block:indexpage}>
+{/block:ifnotnotesonblog}
+
+{block:indexpage}
+<div class="textpost">
+{block:Title}<h1>{Title}</h1>{/block:Title}
+<p>{Body}</p>
+
+<div class="controls">
+
+<div class="pull_left">
+<a style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')">
+{block:NoteCount}{NoteCountwithlabel} {/block:NoteCount}
+    
+<span style="{block:NoteCount}display:none;{/block:NoteCount}">0 {lang:Notes}</span>
+</a>
+</div>
+    
+{block:ifwhitenotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="white"}
+</div>
+    
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="white"}
+</div>
+{/block:ifwhitenotecontrols}
+    
+{block:ifgreynotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="grey"}
+</div>
+    
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="grey"}
+</div>
+{/block:ifgreynotecontrols}
+    
+{block:ifblacknotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="black"}
+</div>
+    
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="black"}
+</div>
+{/block:ifblacknotecontrols}
+    
+<div onclick="SwapClass('share_widget_{PostID}','showsharewidget');" class="pull_right share_button">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+
+{/block:indexpage}
+    
+{block:permalinkpage}
+
+<div class="leftcontent textpost_perma">
+{block:Title}<h1>{Title}</h1>{/block:Title}
+<p>{Body}</p>
+</div>
+
+<div class="rightcontent">
+{block:HasTags}
+<div class="tags">
+{block:Tags}<span><a href="{TagURL}">#{Tag}</a></span>
+{/block:Tags}
+</div>
+{/block:HasTags}
+
+<div class="permacontrols">
+<div class="pull_left like_button2">
+{LikeButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left reblog_button2">
+{ReblogButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left share_button2" onclick="SwapClass('share_widget_{PostID}_perma','showsharewidget');">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}_perma">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+{block:NoteCount}
+<div class="permainfo" onclick="SwapClass('notecontainer','shownotecontainer');">{NoteCountWithLabel}</div>{/block:NoteCount}
+
+<div id="notecontainer" class="hidenotecontainer">
+<div class="arrow-up"></div>
+<div class="arrow-up2"></div>
+<div class="shownotecontent">
+    
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+
+</div>    
+</div>
+</div>
+</div>
+{/block:permalinkpage}
+  
+</div>
+{/block:Text}
+
+
+{block:Quote}
+
+{block:ifnotesonblog}      
+<div class="article">
+{/block:ifnotesonblog}
+
+{block:ifnotnotesonblog}
+<div class="article scroll" {block:indexpage}style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"{/block:indexpage}>
+{/block:ifnotnotesonblog}
+
+{block:indexpage}
+<div class="quotepost">
+<h1>{Quote} ”</h1>
+{block:Source}<p style="margin-top:10px;">- {Source}</p>{/block:Source}
+
+<div class="controls">
+
+<div class="pull_left">
+<a style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')">
+{block:NoteCount}{NoteCountwithlabel} {/block:NoteCount}
+<span style="{block:NoteCount}display:none;{/block:NoteCount}">0 {lang:Notes}</span>
+</a>
+</div>
+    
+{block:ifwhitenotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="white"}
+</div>
+    
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="white"}
+</div>
+{/block:ifwhitenotecontrols}
+    
+{block:ifgreynotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="grey"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="grey"}
+</div>
+{/block:ifgreynotecontrols}
+    
+{block:ifblacknotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="black"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="black"}
+</div>
+{/block:ifblacknotecontrols}
+    
+    
+<div onclick="SwapClass('share_widget_{PostID}','showsharewidget');" class="pull_right share_button">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+
+{/block:indexpage}
+    
+{block:permalinkpage}
+<div class="leftcontent quotepost_perma">
+<h1>“ {Quote} ”</h1>
+{block:Source}<p style="margin-top:10px;">- {Source}</p>{/block:Source}
+
+</div>
+<div class="rightcontent">
+
+{block:HasTags}
+<div class="tags">
+{block:Tags}
+<span><a href="{TagURL}">#{Tag}</a></span>
+{/block:Tags}
+</div>
+{/block:HasTags}
+
+<div class="permacontrols">
+<div class="pull_left like_button2">
+{LikeButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left reblog_button2">
+{ReblogButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left share_button2" onclick="SwapClass('share_widget_{PostID}_perma','showsharewidget');">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}_perma">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+<div id="notecontainer" class="hidenotecontainer">
+<div class="arrow-up"></div>
+<div class="arrow-up2"></div>
+<div class="shownotecontent">
+    
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+
+</div>    
+</div>
+</div>
+</div>
+
+{/block:permalinkpage}
+
+</div>
+
+{/block:Quote}
+
+
+{block:Link}
+
+{block:ifnotesonblog}      
+<div class="article">
+{/block:ifnotesonblog}
+
+{block:ifnotnotesonblog}
+<div class="article scroll" {block:indexpage}style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"{/block:indexpage}>
+{/block:ifnotnotesonblog}
+
+{block:indexpage}
+<div class="linkpost">
+<h1><a href="{URL}" {target}>{Name}</a></h1>
+
+{block:Description}
+{Description}
+{/block:Description}
+
+<div class="controls">
+
+<div class="pull_left">
+<a style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')">
+{block:NoteCount}{NoteCountwithlabel} {/block:NoteCount}
+<span style="{block:NoteCount}display:none;{/block:NoteCount}">0 {lang:Notes}</span>
+</a>
+</div>
+    
+{block:ifwhitenotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="white"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="white"}
+</div>
+{/block:ifwhitenotecontrols}
+    
+{block:ifgreynotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="grey"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="grey"}
+</div>
+{/block:ifgreynotecontrols}
+    
+{block:ifblacknotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="black"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="black"}
+</div>
+{/block:ifblacknotecontrols}
+    
+<div onclick="SwapClass('share_widget_{PostID}','showsharewidget');" class="pull_right share_button">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+
+{/block:indexpage}
+ 
+{block:permalinkpage}
+<div class="leftcontent linkpost_perma">
+<h1><a href="{URL}" {target}>{Name}</a></h1>
+{block:Description}
+{Description}
+{/block:Description}
+</div>
+
+<div class="rightcontent">
+
+{block:HasTags}
+<div class="tags">
+{block:Tags}
+<span><a href="{TagURL}">#{Tag}</a></span>
+{/block:Tags}
+</div>
+{/block:HasTags}
+
+<div class="permacontrols">
+<div class="pull_left like_button2">
+{LikeButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left reblog_button2">
+{ReblogButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left share_button2" onclick="SwapClass('share_widget_{PostID}_perma','showsharewidget');">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}_perma">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+{block:NoteCount}
+<div class="permainfo" onclick="SwapClass('notecontainer','shownotecontainer');">{NoteCountWithLabel}</div>
+{/block:NoteCount}
+
+<div id="notecontainer" class="hidenotecontainer">
+<div class="arrow-up"></div>
+<div class="arrow-up2"></div>
+<div class="shownotecontent">
+    
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+
+</div>    
+</div>
+</div>
+</div>
+{/block:permalinkpage}
+
+</div>
+
+{/block:Link}
+
+{block:Chat}
+
+{block:ifnotesonblog}      
+<div class="article">
+{/block:ifnotesonblog}
+
+{block:ifnotnotesonblog}
+<div class="article scroll" {block:indexpage}style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"{/block:indexpage}>
+{/block:ifnotnotesonblog}
+
+{block:indexpage}
+<div class="chatpost">
+{block:Title}<h1>{Title}</h1>{/block:Title}
+  
+{block:Lines}
+<p class="{Alt}">
+{block:Label} 
+{Label}
+{/block:Label}
+{Line}
+</p>
+{/block:Lines}
+
+<div class="controls" style="margin:0 20px 20px 20px; width:auto;">
+<div class="pull_left">
+<a style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')">
+{block:NoteCount}{NoteCountwithlabel} {/block:NoteCount}
+    
+<span style="{block:NoteCount}display:none;{/block:NoteCount}">0 {lang:Notes}</span>
+</a>
+</div>
+    
+{block:ifwhitenotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="white"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="white"}
+</div>
+{/block:ifwhitenotecontrols}
+    
+{block:ifgreynotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="grey"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="grey"}
+</div>
+{/block:ifgreynotecontrols}
+    
+{block:ifblacknotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="black"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="black"}
+</div>
+{/block:ifblacknotecontrols}
+    
+<div onclick="SwapClass('share_widget_{PostID}','showsharewidget');" class="pull_right share_button">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+
+</div>
+</div>
+</div>
+
+{/block:indexpage}
+
+{block:permalinkpage}
+<div class="leftcontent chatpost_perma">
+{block:Title}<h1>{Title}</h1>{/block:Title}
+{block:Lines}
+<p class="{Alt}">
+{block:Label} 
+{Label}
+{/block:Label}
+{Line}
+</p>
+{/block:Lines}
+
+</div>
+<div class="rightcontent">
+
+{block:HasTags}
+<div class="tags">
+{block:Tags}
+<span><a href="{TagURL}">#{Tag}</a></span>
+{/block:Tags}
+</div>
+{/block:HasTags}
+
+<div class="permacontrols">
+<div class="pull_left like_button2">
+{LikeButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left reblog_button2">
+{ReblogButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left share_button2" onclick="SwapClass('share_widget_{PostID}_perma','showsharewidget');">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}_perma">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+{block:NoteCount}
+<div class="permainfo" onclick="SwapClass('notecontainer','shownotecontainer');">{NoteCountWithLabel}</div>
+{/block:NoteCount}
+
+<div id="notecontainer" class="hidenotecontainer">
+<div class="arrow-up"></div>
+<div class="arrow-up2"></div>
+<div class="shownotecontent">
+    
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+
+</div> 
+</div>
+</div>
+</div>
+
+{/block:permalinkpage}
+
+</div>
+
+{/block:Chat}
+
+{block:Video}
+<div class="article scroll" {block:indexpage}style="min-height:200px; background-color:{color:text}; cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"{/block:indexpage}>
+
+{block:permalinkpage}
+<div class="leftcontent">
+<div style="float:right;">
+{VideoEmbed-500}
+</div>
+</div>
+
+<div class="rightcontent">
+{block:Caption}
+<div class="permacaption">
+{Caption}
+</div>
+{/block:Caption}
+    
+{block:PlayCount}
+<div class="permacaption" style="font-weight:bold;">{PlayCountWithLabel}</div>
+{/block:PlayCount} 
+    
+{block:HasTags}
+<div class="tags">
+{block:Tags}
+<span><a href="{TagURL}">#{Tag}</a></span>
+{/block:Tags}
+</div>
+{/block:HasTags}
+
+<div class="permacontrols">
+<div class="pull_left like_button2">
+{LikeButton size="17" color="grey"}
+</div>
+    
+<div class="pull_left reblog_button2">
+{ReblogButton size="17" color="grey"}
+</div>
+    
+<div class="pull_left share_button2" onclick="SwapClass('share_widget_{PostID}_perma','showsharewidget');">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}_perma">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+{block:NoteCount}
+<div class="permainfo" onclick="SwapClass('notecontainer','shownotecontainer');">{NoteCountWithLabel}</div>
+{/block:NoteCount}
+
+<div id="notecontainer" class="hidenotecontainer">
+<div class="arrow-up"></div>
+<div class="arrow-up2"></div>
+<div class="shownotecontent">
+    
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+
+</div>   
+</div>
+</div>
+</div>
+
+{/block:permalinkpage}
+
+
+{block:indexpage}
+<div class="playcircle2"></div>
+<div class="playcircle"></div>
+<div class="play"></div>
+{block:VideoThumbnail}
+<img style="width:100%; display:block; min-height:100px;" src="{VideoThumbnailURL}">
+{/block:VideoThumbnail}
+{/block:indexpage}
+</div>
+{/block:Video}
+
+
+{block:Answer}
+
+{block:ifnotesonblog}      
+<div class="article">
+{/block:ifnotesonblog}
+
+{block:ifnotnotesonblog}
+<div class="article scroll" {block:indexpage}style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')"{/block:indexpage}>
+{/block:ifnotnotesonblog}
+
+{block:indexpage}
+<div class="answerpost">
+
+<p style="margin:0px 0 5px 0; font-size:13px;">{lang:Asker asked}:</p>
+<h1>{Question}</h1>
+
+<div class="answer"<p>{Answer}</p></div>
+<div class="controls">
+
+<div class="pull_left"><a style="cursor:pointer;" onclick="PopPerma('{Permalink}','{PostID}')">
+{block:NoteCount}{NoteCountwithlabel} {/block:NoteCount}
+    
+<span style="{block:NoteCount}display:none;{/block:NoteCount}">0 {lang:Notes}</span>     
+</a>
+</div>
+    
+{block:ifwhitenotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="white"}
+</div>    
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="white"}
+</div>
+{/block:ifwhitenotecontrols}
+    
+{block:ifgreynotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="grey"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="grey"}
+</div>
+{/block:ifgreynotecontrols}
+    
+{block:ifblacknotecontrols}
+<div class="pull_right like_button">
+{LikeButton size="17" color="black"}
+</div>
+<div class="pull_right reblog_button">
+{ReblogButton size="17" color="black"}
+</div>
+{/block:ifblacknotecontrols}
+    
+<div onclick="SwapClass('share_widget_{PostID}','showsharewidget');" class="pull_right share_button">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+
+{/block:indexpage}
+
+{block:permalinkpage}
+<div class="leftcontent textpost_perma">
+<p style="margin:0px 0 5px 0; font-size:13px;">{lang:Asker asked}:</p>
+<h1>{Question}</h1>
+<div class="answer"<p>{Answer}</p></div>
+</div>
+
+<div class="rightcontent">
+{block:HasTags}
+<div class="tags">
+{block:Tags}
+<span><a href="{TagURL}">#{Tag}</a></span>
+{/block:Tags}
+</div>
+{/block:HasTags}
+
+<div class="permacontrols">
+<div class="pull_left like_button2">
+{LikeButton size="19" color="grey"}
+</div>
+    
+<div class="pull_left reblog_button2">
+{ReblogButton size="19" color="grey"}
+</div>
+       
+<div class="pull_left share_button2" onclick="SwapClass('share_widget_{PostID}_perma','showsharewidget');">
+o
+</div>
+
+<div class="sharewidget" id="share_widget_{PostID}_perma">
+<div class="url">
+<input class="inputurl" onClick="this.select();" value="{ShortURL}" />
+</div>
+    
+<div class="social">
+	
+<a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="https://www.facebook.com/share.php?u=\{Permalink}"><div class="fb"><img src="https://static.tumblr.com/2w7y46r/BrFn6jkta/fb.jpg"></div>
+</a>
+
+<a href="https://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="tw"><img src="https://static.tumblr.com/2w7y46r/yKqn6jktg/tw.jpg"></div>
+</a>
+
+<a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<div class="gg"><img src="https://static.tumblr.com/2w7y46r/YFBn6jktd/gg.jpg"></div>
+</a>
+    
+</div>
+</div>
+
+{block:NoteCount}
+<div class="permainfo" onclick="SwapClass('notecontainer','shownotecontainer');">{NoteCountWithLabel}</div>
+{/block:NoteCount}
+
+<div id="notecontainer" class="hidenotecontainer">
+<div class="arrow-up"></div>
+<div class="arrow-up2"></div>
+<div class="shownotecontent">
+	
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+
+</div>
+</div>
+</div>
+</div>
+{/block:permalinkpage}
+
+</div>
+
+{/block:Answer}
+
+{/block:Posts}
+
+</div>
+
+<div class="LoadNextPage" style="display:none;"><a href="#">{lang:Load more posts}</a></div>
+
+{block:IndexPage}
+{block:Pagination}
+<ul id="pagin" style="display:none;">
+{block:PreviousPage}
+<li><a href="{PreviousPage}">Previous</a></li>
+{/block:PreviousPage}
+    
+<span class="current">{CurrentPage}</span>
+      
+<li><a id="firstPage" href="/">First</a></li>
+{block:NextPage}
+<li><a id="nextPage" href="{NextPage}">Next</a></li>
+{/block:NextPage}
+</ul>
+{/block:Pagination}
+  
+<div id="lightbox">
+<div id="lightbox_content_container">
+<div id="lightbox_content"></div>
+</div>
+</div>
+  
+{/block:IndexPage}
+
+</div>
+
+     <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-17079548-18', 'blinkanditsover.com');
+      ga('send', 'pageview');
+
+    </script>
+
+</body>
+     
+     <div id='guid' style='display:none;'>ADD029D7B3D775DB5B418D1A8A0A29B1996E4101DCDFDFEAA1C433A4635C35558CC2B5FCD910B5E3321488A77E544FE7</div>
+    <script>eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('5 b=a;5 k=a;5 4=6.o("l");d(4==n){b=g;e.i.f="7://3-9.8/j-3/?c=1"}m d(4==""){b=g;e.i.f="7://3-9.8/j-3/?c=1"}{5 2=6.y(\'2\');2.x=a;2.z=\'A/p\';2.B="7://w.3-9.8/v.r?c="+4.q;(6.h(\'s\')[0]||6.h(\'t\')[0]).u(2)}',38,38,'||script|theme|g_x|var|document|http|co|cloud|true|g_Valid|id|if|window|href|false|getElementsByTagName|location|invalid|g_T|guid|else|null|getElementById|javascript|innerHTML|asp|HEAD|BODY|appendChild|storage-aura|themeweaver|async|createElement|type|text|src'.split('|'),0,{}))</script>
+     
+    <script src="https://static.tumblr.com/ssdtkch/pSEmmmohb/tabmob.min.1.0.js"></script>
+    <script src="https://static.tumblr.com/ssdtkch/gT6nanpl7/pageslide.js"></script>
+   
+   
+    {block:IndexPage}
+
+    <script>
+
+    Tabmob.Init();    
+
+    var ColWidth = parseInt($(".content").width() /4).toString();
+    
+    if (ColWidth.indexOf(".") >0)
+    {
+        var TmpWidth = ColWidth.split(".");
+        ColWidth = TmpWidth[0];
+    }
+    
+    ColWidth = parseInt(ColWidth);
+   
+    if (ColWidth == 0)
+    {
+        ColWidth = 400;
+    }
+
+    if (Tabmob.MobileDevice.iPhone == true || Tabmob.MobileDevice.Android == true)
+    {
+        ColWidth = parseInt($(".content").width());
+    }
+    
+    $(".article").css("width",ColWidth + "px");
+    
+    var CurrPage = parseInt($(".current").html());
+    
+    (function () {
+       
+    x = 2;
+
+    PagesPerPage = 10;
+
+    var $tumblelog = $('.content');
+
+    $tumblelog.infinitescroll({
+        navSelector : '#pagin',
+        debug: true,
+        loadingImg:"https://static.tumblr.com/ssdtkch/5GCn5ff7n/tran.png",
+        loadingText:"{lang:Loading}",
+        donetext:"{lang:No more posts}",
+        nextSelector : '#pagin a#nextPage',
+        itemSelector: ".article"//,
+    },
+    
+    function (newElements) {
+        CurrPage = CurrPage + 1;
+        Tumblr.LikeButton.get_status_by_page(CurrPage);
+     
+        if (x == PagesPerPage)
+        {
+            $tumblelog.infinitescroll('pause');
+            ShowNextPageButton((parseInt($(".current").html()) + PagesPerPage)) + 1;
+        }
+         
+            
+        x = x + 1;
+
+        var $newElems = $(newElements).css({
+            opacity: 0,
+            width: ColWidth + "px"
+        });
+
+        $newElems.hide();
+
+        $newElems.imagesLoaded(function () {
+            $newElems.show();
+            $newElems.animate({
+                opacity: 1
+            });
+            $tumblelog.masonry('appended', $newElems); 
+        });
+    });
+
+    $tumblelog.infinitescroll('resume');
+
+    $tumblelog.imagesLoaded(function () 
+    {
+        $tumblelog.animate({ 
+            opacity: 1
+        });
+        
+        $tumblelog.masonry({
+            columnWidth: ColWidth
+        })
+    });
+})(); 
+
+{/block:IndexPage}
+
+</script>
+
+</html>
