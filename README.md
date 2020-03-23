@@ -48,4 +48,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Screenshot
 
-![](https://mir-cdn.behance.net/v1/rendition/project_modules/fs/d7c72789509621.5e63d21e33bb8.png)
+![](https://mir-cdn.behance.net/v1/rendition/project_modules/fs/bd1f6c89509621.5e790d640c31e.png)
